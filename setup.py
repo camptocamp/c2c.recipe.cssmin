@@ -7,7 +7,7 @@ setup(
     name = 'c2c.recipe.cssmin',
     version = '0.1',
 
-    author  = 'Frédéric Junod',
+    author  = 'Frederic Junod',
     author_email = 'frederic.junod@camptocamp.com',
     url = 'http://github.com/camptocamp/c2c.recipe.cssmin',
 
