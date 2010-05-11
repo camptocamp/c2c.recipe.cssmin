@@ -30,6 +30,9 @@ class CssMin(object):
         self.wrap = options.get('wrap', None)
 
     def install(self):
+        dir = os.path.dirname(self.output)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
         output = open(self.output, 'w')
         for f in self.input:
             css = relocate_urls(open(f).read(), f, self.output)
