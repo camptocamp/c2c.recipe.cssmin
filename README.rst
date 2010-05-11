@@ -8,7 +8,7 @@ Requires zc.buildout and `cssmin <http://pypi.python.org/pypi/cssmin>`_
 
 Usage
 -----
-Create a buildout.cfg file which contains the following:
+Create a buildout.cfg file which contains the following::
 
     [buildout]
     parts = cssmin
