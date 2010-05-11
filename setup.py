@@ -22,5 +22,5 @@ setup(
     install_requires = ['cssmin'],
     packages = find_packages(exclude=['ez_setup']),
     namespace_packages = ['c2c', 'c2c.recipe'],
-    entry_points = {'zc.buildout' : ['cssmin = c2c.recipe.cssmin.buildout:CssMin']}
+    entry_points = {'zc.buildout' : ['default = c2c.recipe.cssmin.buildout:CssMin']}
 )

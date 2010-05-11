@@ -14,7 +14,7 @@ Create a buildout.cfg file which contains the following::
     parts = cssmin
 
     [cssmin]
-    recipe = c2c.recipe.cssmin:cssmin
+    recipe = c2c.recipe.cssmin
     input = foo/bar/file1.css
             foo/bar/file2.css
             foo/baz/file3.css
