@@ -48,7 +48,7 @@ class CssMin(object):
 def relocate_urls(css, src, dest):
     """ Relocate all relative urls """
     # matches relative files only
-    regex = re.compile(r"url\([\'\"]?([^:'\"]+)[\'\"]?\)")
+    regex = re.compile(r"url\(\s?[\'\"]?([^:'\"]+)[\'\"]?\s?\)")
     return regex.sub(relative(src, dest), css)
 
 def relative(src, dest):
