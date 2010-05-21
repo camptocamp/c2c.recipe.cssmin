@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'c2c.recipe.cssmin',
-    version = '0.3',
+    version = '0.4',
     license = 'MIT License',
 
     author  = 'Frederic Junod',
