@@ -41,9 +41,7 @@ class CssMin(object):
 
         return self.output
 
-    def update(self):
-        pass
-
+    update = install
 
 def relocate_urls(css, src, dest):
     """ Relocate all relative urls """
