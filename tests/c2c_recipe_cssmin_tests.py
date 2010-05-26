@@ -8,7 +8,9 @@ class TestCssminRecipe(unittest.TestCase):
         # Same directory, relative path:
         self.assertEqual(relocate_urls("url( 'foo.png' )", "b/src.css", "b/dest.css"), "url('foo.png')")
         # Different directory:
-        self.assertEqual(relocate_urls("url( 'foo.png' )", "/a/b/src.css", "/a/c/dest.css"), "url('../b/foo.png')")
+        self.assertEqual(relocate_urls("url('foo.png' )", "/a/b/src.css", "/a/c/dest.css"), "url('../b/foo.png')")
+        # Don't update remote urls:
+        self.assertEqual(relocate_urls("url('http://www.example.com/foo.png')", "/a/b/src.css", "/a/c/dest.css"), "url('http://www.example.com/foo.png')")
         # Only handle url rules:
         self.assertEqual(relocate_urls("foo('foo.png' )", "/a/b/src.css", "/a/c/dest.css"), "foo('foo.png' )")
         
