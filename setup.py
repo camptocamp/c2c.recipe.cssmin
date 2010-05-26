@@ -13,7 +13,7 @@ setup(
     url = 'http://github.com/camptocamp/c2c.recipe.cssmin',
 
     description = 'A buildout recipe to merge and compress css files',
-    long_description=open('README.rst').read(),
+    long_description = open('README.rst').read(),
 
     classifiers = [
         'Framework :: Buildout',
