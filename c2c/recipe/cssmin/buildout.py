@@ -27,7 +27,7 @@ class CssMin(object):
         basedir = buildout['buildout']['directory']
         self.input = [os.path.join(basedir, f) for f in options['input'].split()]
         self.output = os.path.join(basedir, options['output'])
-        self.compress = options.get_bool('compress')
+        self.compress = options.query_bool('compress', 'true')
         self.wrap = options.get('wrap', None)
 
     def install(self):
