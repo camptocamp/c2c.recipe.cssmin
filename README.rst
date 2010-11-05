@@ -19,5 +19,6 @@ Create a buildout.cfg file which contains the following::
             foo/bar/file2.css
             foo/baz/file3.css
     output = foo/build/output.min.css
+    compress = true
 
 Path are relative to the buildout directory, absolute path are also allowed.
