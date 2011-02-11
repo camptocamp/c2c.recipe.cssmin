@@ -10,7 +10,7 @@ setup(
 
     author  = 'Frederic Junod',
     author_email = 'frederic.junod@camptocamp.com',
-    url = 'http://github.com/camptocamp/c2c.recipe.cssmin',
+    url = 'https://github.com/camptocamp/c2c.recipe.cssmin',
 
     description = 'A buildout recipe to merge and compress css files',
     long_description = open('README.rst').read(),
@@ -24,7 +24,7 @@ setup(
     ],
 
     install_requires = ['cssmin'],
-    packages = find_packages(exclude=['ez_setup']),
+    packages = find_packages(),
     namespace_packages = ['c2c', 'c2c.recipe'],
     entry_points = {'zc.buildout' : ['default = c2c.recipe.cssmin.buildout:CssMin']}
 )
