@@ -3,6 +3,7 @@
 #
 import re
 import os
+import logging
 
 # backport os.path.relpath if python < 2.6
 try:
@@ -25,6 +26,7 @@ from cssmin import cssmin
 class CssMin(object):
     def __init__(self, buildout, name, options):
         basedir = buildout['buildout']['directory']
+        self.logger = logging.getLogger(name)
         self.input = [os.path.join(basedir, f) for f in options['input'].split()]
         self.output = os.path.join(basedir, options['output'])
         self.compress = options.query_bool('compress', 'true')
@@ -43,6 +45,7 @@ class CssMin(object):
                 output.write(css)
         output.close()
 
+        self.logger.debug("merging %s to %s"%(self.input, self.output))
         return self.output
 
     update = install
