@@ -64,7 +64,8 @@ def relative(src, dest):
     def _relative(m):
         if m is not None:
             abspath = os.path.normpath(os.path.join(srcdir, m.group(1)))
-            return "url('%s')"%relpath(abspath, destdir)
+            # force '/' as path separator
+            return "url('%s')" % '/'.join(relpath(abspath, destdir).split(os.sep))
 
     return _relative
 
